@@ -1,0 +1,130 @@
+:root {
+    --color-fontpad--: white;
+    --color-fontsapn--: rgb(247, 27, 74);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.945);
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+nav {
+    padding: 45px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+nav h1 {
+    color: var(--color-fontpad--);
+    font-size: 40px;
+    cursor: pointer;
+    letter-spacing: 5px;  
+}
+
+nav span {
+    color: var(--color-fontsapn--);
+}
+
+nav ul li {
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    list-style-type: none;
+}
+
+nav ul li a  {
+    color: var(--color-fontpad--);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+ }
+
+nav ul li a:hover {
+    color: var(--color-fontsapn--);
+ }
+
+.contents {
+    position: relative;
+    padding-left: 20px;
+
+}
+ .contents h4{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    padding: 10px;
+ }
+
+ .contents h1 {
+    color: var(--color-fontpad--);
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 25px 0px 25px;
+ }
+ .contents span {
+    color: var(--color-fontsapn--);
+ }
+
+.contents h3 {
+    color: var(--color-fontpad--);
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 20px 0px 20px 0px;
+    width: 50%;
+    padding: 10px 0px 10px 0px;
+    position: relative;
+}
+
+.contents img {
+    position:absolute;
+    top: 1%;
+    right: 15%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.contents h5 {
+    color: var(--color-fontpad--);
+    font-size: 30px;
+    letter-spacing: 2px;
+    width: 200px;
+    text-align: center;
+    margin-top: 50px;
+    transform: translateX(+20px);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.contents h5::before {
+    content: "";
+    color: var(--color-fontsapn--);
+    background-color: rgb(89, 204, 208);
+    display: block;
+    border-radius: 20px;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: transform 300ms ease;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.contents h5:hover::before {
+    color: var(--color-fontsapn--);
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+section {
+    margin-top: 15rem;
+}
