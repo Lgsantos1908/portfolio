@@ -270,3 +270,110 @@ header a svg:hover {
 }
 /*estilização projetos*/
 
+.project {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project > h1 {
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    left: 4%;
+    padding-top: 25px;
+}
+
+.containerproject {
+    width: 1200px;
+    height: 500px;
+    margin-top: 7%;
+    margin-bottom: 20px;
+    background: rgb(255, 0, 51);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    
+}
+
+.myproject {
+    width: 1200px;
+    height: 500px;
+    display: flex;
+}
+
+.supercar, .huddle {
+    display: flex;
+}
+
+.textproject {
+    color: white;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textproject h3{
+    font-size: 50px;
+    text-align: center;
+}
+
+.textproject h5{
+    font-size: 30px;
+    text-align: center;
+}
+
+.textproject button {
+    font-size: 23px;
+    color: black;
+    text-align: center;
+    background: white;
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+}
+
+.textproject button:hover {
+    font-size: 25px;
+    color: rgb(255, 0, 51);
+    background: rgba(0, 0, 0, 0.85)
+}
+
+.textproject button:active {
+    font-size: 23px;
+}
+.imgproject img {
+    width: 600px;
+    height: 500px;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.btspan {
+    color: white;
+}
+.textproject, .imgproject {
+    position: relative;
+    animation: slide 10s infinite ease-in-out;
+}
+
+@keyframes slide {
+    0%{left: 0px}
+
+    40%{left: 0px}
+
+    50%{left: -1200px}
+
+    90%{left:-1200px}
+
+    100%{left: 0px}
+}
+
