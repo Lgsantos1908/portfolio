@@ -93,6 +93,7 @@ header a button {
 header a svg:hover {
     width: 50px;
     height: 50px;
+    transition: 0.5s;
 }
 
 .contents {
@@ -131,9 +132,10 @@ header a svg:hover {
 
 .contents img {
     position:absolute;
-    right: 18%;
-    width: 20%;
+    right: 400px;
+    width: 270px;
     border-radius: 10px;
+    right: 200px;
 }
 
 .contents a span {
@@ -270,7 +272,7 @@ header a svg:hover {
 }
 /*estilização projetos*/
 
-.project {
+.content {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -278,7 +280,7 @@ header a svg:hover {
     align-items: center;
 }
 
-.project > h1 {
+.content > h1 {
     font-size: 60px;
     color: white;
     position: absolute;
@@ -286,7 +288,7 @@ header a svg:hover {
     padding-top: 25px;
 }
 
-.containerproject {
+.slides {
     width: 1200px;
     height: 500px;
     margin-top: 7%;
@@ -296,18 +298,14 @@ header a svg:hover {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-
-    
 }
 
-.myproject {
+.slide {
     width: 1200px;
     height: 500px;
     display: flex;
-}
-
-.supercar, .huddle {
-    display: flex;
+    transition: 0.6s;
+    animation: slide 15s infinite ease-in-out;;
 }
 
 .textproject {
@@ -324,13 +322,13 @@ header a svg:hover {
     font-size: 50px;
     text-align: center;
     width: 250px;
-    margin: auto
+    margin: 30px;
 }
 
 .textproject h5{
     font-size: 30px;
     text-align: center;
-    margin: auto;
+    margin: 30px;
 }
 
 .textproject button {
@@ -342,7 +340,7 @@ header a svg:hover {
     height: 50px;
     border: none;
     border-radius: 15px;
-    margin:auto;
+    margin:30px;
 }
 
 .textproject button:hover {
@@ -361,24 +359,40 @@ header a svg:hover {
     border-radius: 5%;
 }
 
-.btspan {
-    color: white;
-}
-.textproject, .imgproject {
-    position: relative;
-    animation: slide 10s infinite ease-in-out;
+.navegation {
+    display: flex;
 }
 
-@keyframes slide {
-    0%{left: 0px}
+.bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid white;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
-    40%{left: 0px}
+.bar:hover {
+    background-color: white;
+    box-shadow: 0px 0px 10px white;
+}
 
-    50%{left: -1200px}
+.bar:active{
+    background-color: rgb(187, 187, 187);
+    box-shadow: 0px 0px 10px white;
+}
 
-    90%{left:-1200px}
+input {
+    display: none;
+}
 
-    100%{left: 0px}
+#slide1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+    margin-left: -1200px;
 }
 
 /*Estilização rodape*/
@@ -401,7 +415,18 @@ header a svg:hover {
     border-radius: 50%;
 }
 
+.icon svg:hover {
+    color: var(--color-fontsapn--);
+    border: var(--color-fontsapn--);
+    width: 65px;
+    height: 65px;
+    transition: 0.4s;
+}
+
 footer p {
     color: var(--color-fontsapn--);
     text-align: center;
 }
+
+
+
