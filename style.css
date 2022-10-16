@@ -323,11 +323,14 @@ header a svg:hover {
 .textproject h3{
     font-size: 50px;
     text-align: center;
+    width: 250px;
+    margin: auto
 }
 
 .textproject h5{
     font-size: 30px;
     text-align: center;
+    margin: auto;
 }
 
 .textproject button {
@@ -339,6 +342,7 @@ header a svg:hover {
     height: 50px;
     border: none;
     border-radius: 15px;
+    margin:auto;
 }
 
 .textproject button:hover {
@@ -377,3 +381,27 @@ header a svg:hover {
     100%{left: 0px}
 }
 
+/*Estilização rodape*/
+
+.icon {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    color: white;
+    margin: 10px;
+    width: 55px;
+    height: 55px;
+    padding: 2px;
+    border:white solid 2px;
+    border-radius: 50%;
+}
+
+footer p {
+    color: var(--color-fontsapn--);
+    text-align: center;
+}
