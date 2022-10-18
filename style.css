@@ -441,7 +441,7 @@ footer p {
     text-align: center;
 }
 
-@media screen and (min-width:500px) and (max-width: 900px) { /*estilização para celular*/
+@media screen and (min-width:350px) and (max-width: 900px) { /*estilização para celular*/
     header { /*cabeçalho*/
         display: flex;
         flex-direction: column;
@@ -585,7 +585,7 @@ footer p {
 
         60% {left: -700px;}
 
-        75% {left: -700;px}
+        75% {left: -700px;}
 
         90% {left: -1050px;}
 
