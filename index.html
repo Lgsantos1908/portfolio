@@ -9,8 +9,7 @@
     <title>Portfólio</title>
 </head>
 <body>
-    <header> 
-        <p id="inicio"></p>
+    <header id="inicio">
         <nav><!--Cabeçalho-site-->
             <h1>Portfó<span>lio</span></h1>
             <ul>
@@ -38,9 +37,8 @@
         </a>
             
     </header>
-    <section>
+    <section id="sobre">
         <div class="aboutme">
-            <p id="sobre"></p>
             <h1>Sobre mim</h1>
             <div class="containerabout">
                 <img src="Imagens/Eu.jpg" alt="">
@@ -54,9 +52,8 @@
         </div>
         
     </section>
-    <section>
+    <section id="conhecimento">
         <div class="skills">
-            <p id="conhecimento"></p>
             <h1>Conhecimentos</h1>
             <div class="containerskills">  
                 <div class="contentskills">
@@ -99,9 +96,8 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="projetos">
         <div class="content">
-            <p id="projetos"></p>
             <h1>Projetos</h1>
             <div class="slides">
                 <input type="radio" name="slide" id="slide1" checked>
@@ -109,13 +105,13 @@
                 <div class="slide s1">
                     <div class="textproject">
                         <h3>Site para venda de Carros</h3>
-                        <a href="#"><button>Acessar projeto</button></a>
+                        <a href="https://lgsantos1908.github.io/Supercar-site/" target="_blank"><button>Acessar projeto</button></a>
                     </div>
                     <div class="imgproject">
                         <img src="Imagens/Supercar.jpeg" alt="supercar">
                     </div>
                 </div>
-                <div class="slide">
+                <div class="slide s2">
                     <div class="textproject">
                         <h3>Site de loading</h3>
                         <h5>Projeto realizado conforme desafio do site Frontend Mentor </h5>
@@ -125,16 +121,20 @@
                         <img src="Imagens/huddle.jpeg" alt="huddle">
                     </div>
                 </div>
+                <div class="navegation">
+                    <label class="bar p1" for="slide1" id="flash1"></label>
+                    <label class="bar p2" for="slide2" id="flash2"></label>
+                </div>
             </div>
             <div class="navegation">
-                <label class="bar" for="slide1"></label>
-                <label class="bar" for="slide2"></label>
+                <label class="bar p1" for="slide1" id="flash1"></label>
+                <label class="bar p2" for="slide2" id="flash2"></label>
             </div>
+            
         </div>
         
     </section>
-    <footer>
-        <p id="contato"></p>
+    <footer id="contato">
         <div class="icon">
             <a href="https://www.instagram.com/luizgabriel1908/" target="_blank" class="instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
