@@ -284,12 +284,13 @@ header a svg:hover {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: white;
     align-items: center;
 }
 
 .content > h1 {
     font-size: 60px;
-    color: white;
+    color: black;
     position: absolute;
     left: 4%;
     padding-top: 25px;
@@ -302,6 +303,7 @@ header a svg:hover {
     margin-top: 7%;
     margin-bottom: 20px;
     background: rgb(255, 0, 51);
+    border: rgba(0, 0, 0, 0.680) solid 3px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -374,7 +376,7 @@ header a svg:hover {
 .bar {
     width: 70px;
     height: 17px;
-    border: 2px solid white;
+    border: 2px solid black;
     margin: 6px;
     border-radius: 5px;
     cursor: pointer;
@@ -383,13 +385,13 @@ header a svg:hover {
 }
 
 .bar:hover {
-    background-color: white;
-    box-shadow: 0px 0px 10px white;
+    background-color: black;
+    box-shadow: 0px 0px 10px black;
 }
 
 .bar:active{
     background-color: rgb(187, 187, 187);
-    box-shadow: 0px 0px 10px white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
 }
 
 input {
@@ -439,8 +441,8 @@ footer p {
     text-align: center;
 }
 
-@media screen and (max-width:390px) {
-    header {
+@media screen and (max-width:390px) { /*estilização para celular*/
+    header { /*cabeçalho*/
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -474,9 +476,9 @@ footer p {
     }
 
     .contents {
-        width: 340px;
+        width: 100%;
         height: 100vh;
-        margin: 25px;
+        margin: 0px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -486,7 +488,7 @@ footer p {
     }
 
     .contents h3 {
-        width: 340px;
+        width: 100%;
         text-align: center;
     }
     .contents img {
@@ -495,12 +497,174 @@ footer p {
         position: relative;
         right: inherit;
     }
-    
-    .aboutme {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+
+    .contents a {
+        width: 200px;
         text-align: center;
     }
-}
+    
+    .aboutme {/* sobe mim*/
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .aboutme h1 {
+        width: 100%;
+        position: relative;
+        font-size: 50px ;
+    }
+
+    .containerabout {
+        width: 350px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .containerabout p {
+        width: 330px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .containerabout img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .content { /*conhecimentos*/
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .skills h1 {
+        width: 100%;
+        margin-top: 15%;
+        position: relative;
+        font-size: 45px ;
+        text-align: center;
+        padding: 0px;
+        left: 0px;
+    }
+
+    .contentskills {
+        width: 100%;
+        height: 470px;
+        display: flex;
+        margin-top: 30%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .skill-item {
+        width: 250px;
+        padding: 0px;
+        animation: carrosel 20s infinite ease-in-out;
+        position: relative;
+        border: rgba(0, 0, 0, 0.38) solid 2px;
+        border-radius: 10px;
+        
+    }
+
+    @keyframes carrosel {
+        0% {left: 0px}
+
+        15% {left: 0px}
+
+        30% {left: -350px}
+
+        45% {left: -350px}
+
+        60% {left: -700px;}
+
+        75% {left: -700;px}
+
+        90% {left: -1050px;}
+
+        100% {left: -0px;}
+        
+    }
+
+    .skill-item h3 {
+        font-size: 19px;
+    }
+
+    .skill-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .content { /*projetos*/
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+    .content h1 {
+        width: 100%;
+        position: relative;
+        font-size: 50px ;
+        text-align: center;
+    }
+
+    .slides {
+        width: 350px;
+        height: 650px;
+        overflow: hidden;
+
+    }
+
+    .slide {
+        width: 350px;
+        height: 570px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .textproject {
+        width: 100%;
+        height: 300px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .textproject h3 {
+        font-size: 35px;
+        width: 100%;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .textproject h5{
+        font-size: 20px;
+        width: 100%;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .imgproject img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5%;
+    }
+    
+
+    #slide1:checked ~ .s1 {
+        margin-left: 0;
+    }
+    
+    #slide2:checked ~ .s1 {
+        margin-left: -350px;
+    }
+}   
+
+
 
