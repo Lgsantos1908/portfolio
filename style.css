@@ -477,7 +477,7 @@ footer p {
 
     .contents {
         width: 100%;
-        height: 100vh;
+        height: 740px;
         margin: 0px;
         display: flex;
         align-items: center;
@@ -505,7 +505,7 @@ footer p {
     
     .aboutme {/* sobe mim*/
         width: 100%;
-        height: 100vh;
+        height: 740px;
         display: flex;
         justify-content: space-around;
     }
@@ -538,7 +538,7 @@ footer p {
 
     .content { /*conhecimentos*/
         width: 100%;
-        height: 100vh;
+        height: 740px;
         display: flex;
         justify-content: space-around;
     }
@@ -604,7 +604,7 @@ footer p {
 
     .content { /*projetos*/
         width: 100%;
-        height: 100vh;
+        height: 740px;
         display: flex;
         justify-content: center;
     }
