@@ -20,16 +20,13 @@ body {
 }
 /*Customização cabeçalho*/
 header {
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
 }
 
-header p {
-    position: absolute;
-    top: 0;
-}
 nav {
     padding: 20px;
     display: flex;
@@ -88,6 +85,7 @@ header a button {
     background: transparent;
     border: none;
     cursor: pointer;
+    animation: ef-pulse-grow 2s infinite;
 }
 
 header a svg:hover {
@@ -95,6 +93,13 @@ header a svg:hover {
     height: 50px;
     transition: 0.5s;
 }
+
+@keyframes ef-pulse-grow {
+    to {
+      -webkit-transform: scale(1.2,1.2);
+      transform: scale(1.2,1.2);
+    }
+  }
 
 .contents {
     width: 1200px;
@@ -193,7 +198,8 @@ header a svg:hover {
 
 .containerabout {
     color: white;
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 350px;
     height: 500px;
     margin-top: 10%;
     display: flex;
@@ -240,7 +246,8 @@ header a svg:hover {
     left: 4%;
 }
 .contentskills {
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 350px;
     height: 500px;
     margin-top: 10%;
     margin-bottom: 20px;
@@ -289,7 +296,8 @@ header a svg:hover {
 }
 
 .slides {
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 350px;
     height: 500px;
     margin-top: 7%;
     margin-bottom: 20px;
@@ -371,6 +379,7 @@ header a svg:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
+    
 }
 
 .bar:hover {
@@ -387,12 +396,14 @@ input {
     display: none;
 }
 
+
 #slide1:checked ~ .s1 {
-    margin-left: 0;
+    margin-left: 0;    
+    
 }
 
 #slide2:checked ~ .s1 {
-    margin-left: -1200px;
+    margin-left: -1200px;    
 }
 
 /*Estilização rodape*/
@@ -428,5 +439,68 @@ footer p {
     text-align: center;
 }
 
+@media screen and (max-width:390px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
+    nav {
+        width: 340px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    nav h1 {
+        text-align: center;
+        width: 340px;
+        margin: auto;
+        position: static;
+        font-size: 40px;
+    }
+
+    nav ul {
+        width: 320px;
+        margin-top: 20px;
+        position: fixed;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contents {
+        width: 340px;
+        height: 100vh;
+        margin: 25px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contents h3 {
+        width: 340px;
+        text-align: center;
+    }
+    .contents img {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        right: inherit;
+    }
+    
+    .aboutme {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: center;
+    }
+}
 
