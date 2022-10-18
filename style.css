@@ -441,7 +441,7 @@ footer p {
     text-align: center;
 }
 
-@media screen and (max-width:390px) { /*estilização para celular*/
+@media screen and (min-width:500px) and (max-width: 900px) { /*estilização para celular*/
     header { /*cabeçalho*/
         display: flex;
         flex-direction: column;
