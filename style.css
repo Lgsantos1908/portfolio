@@ -36,6 +36,10 @@ nav {
     
 }
 
+#btn-mobile {
+    display: none;
+}
+
 nav h1 {
     color: var(--color-fontpad--);
     font-size: 50px;
@@ -466,16 +470,65 @@ footer p {
         position: static;
         font-size: 40px;
     }
-
-    nav ul {
-        width: 320px;
-        margin-top: 20px;
+    #btn-mobile {
+        display: flex;
         position: fixed;
-        text-align: center;
-        display: none;
-        flex-direction: column;
-        justify-content: center;
+        right: 20px;
+        font-size: 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
     }
+
+    #hamburger {
+        width: 30px;
+        border-top: 2px solid;
+        display: block;
+    }
+
+    #hamburger::after, #hamburger::before  {
+        content:'';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 6px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px
+    }
+
+    #menu {
+        display: none;
+        
+    }
+    
+    #nav.active #menu {
+        display: block;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        width: 200px;
+        height: 250px;
+        top: 70px;
+        z-index: 1000;
+    }   
+
+    
 
     .contents {
         width: 100%;
